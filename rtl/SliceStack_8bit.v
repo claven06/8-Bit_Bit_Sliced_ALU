@@ -66,7 +66,7 @@ module Slice_1bit (
     // Full Subtracter sum operation
     FullAdder U1 (.a(a), .b(~b), .cin(bin), .sum(y[1]), .cout(sub_w));
     assign z = sel[1] ? y[1] : 1'bz;
-    assign cout = sel[1] ? sub_w : 1'bz;
+    assign bout = sel[1] ? sub_w : 1'bz;
     // Bitwise AND operation
     assign y[2] = a & b;
     assign z = sel[2] ? y[2] : 1'bz;
